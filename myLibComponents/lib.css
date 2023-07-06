@@ -1,0 +1,97 @@
+/* ! Esse código não foi copiado de nenhuma fonte externa, é uma biblioteca criada por mim -Lucas Lima Dias Messias para o Projeto de Bloco da INFNET */
+
+.checkbox-btn, .radio-btn{
+    margin-right: 4px;
+    transition: background-color 0.2s;
+}
+.radio-inputs .input-container, .check-inputs .input-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.radio-btn, .checkbox-btn{
+    width: 0.85em;
+    height: 0.85em;
+    outline: 2px solid var(--border-color-dark);
+    cursor: pointer;
+}
+.radio-btn{
+    border: 2px solid var(--basewhite);
+    border-radius: 50%;
+}
+.radio-btn.checked, .checkbox-btn.checked{
+   background-color: var(--contrast-orange);
+   transition: background-color 0.2s;
+}
+.checkbox-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.checkbox-btn span{
+    display: none;
+}
+.half{
+    background-color: black;
+}
+.dismark{
+    background-color: green;
+}
+.checkbox-btn.mark-one.checked span, .checkbox-btn.mark-all.checked.dismark span:first-child, .checkbox-btn.mark-all.checked.half span:nth-child(2){
+    display: block;
+    color: #fff;
+}
+.select-btn{
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    border: 1px solid #dedede;
+    box-shadow: 0 0 15px 0 #dedede;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+.select-btn span{
+    height: 32px;
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+    border-bottom: 1px solid #dfdfdf;
+    cursor: pointer;
+}
+
+.select-btn span:hover{
+    background-color: #e9e9e9;
+}
+.select-options span:last-child{
+    border: none;
+}
+.select-options{
+    height: 0;
+    position: absolute;
+    border: 1px solid #dfdfdf;
+    overflow-y: hidden;
+    display: none;
+}
+.select-btn.open .select-options{
+    display: block;
+    transition: height 1s;
+    top: 32px;
+    width: inherit;
+    background-color: #fff;
+    height: fit-content;
+    z-index: 1;
+    border-radius: 0 0 10px 10px;
+}
+.select-btn i{
+    position: absolute;
+    right: 4px;
+    top: 6px;
+    transition: transform 0.5s;
+}
+.select-btn.open i{
+    transform: rotate(180deg);
+    transition: transform 0.5s;
+}
+.select-btn i{
+    cursor: pointer;
+}
